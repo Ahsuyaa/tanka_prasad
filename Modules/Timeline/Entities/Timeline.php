@@ -12,6 +12,13 @@ class Timeline extends Model
     protected $fillable = [];
     protected $guarded = [];
 
+    protected $appends = ['image_link'];
+
+    public function getImageLinkAttribute()
+    {
+       return asset("upload/images/timelines/".$this->image);
+    }
+
     protected static function newFactory()
     {
         return \Modules\Timeline\Database\factories\TimelineFactory::new();

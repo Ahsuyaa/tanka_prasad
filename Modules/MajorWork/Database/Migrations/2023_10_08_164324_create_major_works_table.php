@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('major_works', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('slug');
             $table->string('image')->nullable();
             $table->longText('description')->nullable();
             $table->timestamps();
