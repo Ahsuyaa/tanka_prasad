@@ -1,0 +1,11 @@
+{
+    "name": "Observation",
+    "alias": "observation",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Observation\\Providers\\ObservationServiceProvider"
+    ],
+    "files": []
+}

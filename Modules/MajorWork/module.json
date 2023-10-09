@@ -1,0 +1,11 @@
+{
+    "name": "MajorWork",
+    "alias": "majorwork",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\MajorWork\\Providers\\MajorWorkServiceProvider"
+    ],
+    "files": []
+}
