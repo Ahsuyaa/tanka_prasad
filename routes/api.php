@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\V1\CompanyProfileController;
 use App\Http\Controllers\Api\V1\ContactController;
 use App\Http\Controllers\Api\V1\GalleryController;
 use App\Http\Controllers\Api\V1\HomeController;
+use App\Http\Controllers\Api\V1\MenuController;
 use App\Http\Controllers\Api\V1\NavController;
 use App\Http\Controllers\Api\V1\SubscriptionController;
 use App\Http\Controllers\Api\V1\TimelineController;
@@ -52,6 +53,10 @@ Route::post('/contact/store', [ContactController::class,'contact']);
 
 // Subscription
 Route::post('/subscription/store', [SubscriptionController::class,'subscription']);
+
+// Menu
+Route::get('/menu/list', [MenuController::class,'menu']);
+Route::get('/page/{slug}', [MenuController::class,'page']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
