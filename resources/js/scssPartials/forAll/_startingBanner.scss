@@ -1,10 +1,43 @@
 .starting-banner-comp {
-  margin-top: 140px;
-  background-color: rgb(231, 231, 231);
-  height: 350px;
-  width: 100%;
-  .image {
-    height: 100%;
+    margin-top: 140px;
+    background-color: rgb(231, 231, 231);
+    height: 350px;
     width: 100%;
-  }
+    .image {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .starting-banner-comp {
+        margin-top: 90px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .starting-banner-comp {
+        height: 300px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .starting-banner-comp {
+        height: 270px;
+    }
+}
+@media screen and (max-width: 570px) {
+    .starting-banner-comp {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .starting-banner-comp {
+        margin-top: 50px;
+        height: 220px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .starting-banner-comp {
+        height: 180px;
+    }
 }

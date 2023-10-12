@@ -6,9 +6,9 @@ $primaryWhite: #f7f6f6;
 $primaryPeru: #e85806;
 
 body {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 @import "./scssPartials/main/header/header";
@@ -23,5 +23,7 @@ body {
 @import "./scssPartials/pages/pramukhKaryaharu/pramukhKaryaharu";
 @import "./scssPartials/pages/pramukhKaryaharu/pramukhKaryaharuSubpage";
 @import "./scssPartials/pages/gallery/gallery";
+@import "./scssPartials/pages/gallery/galleryImages";
+
 @import "./scssPartials/pages/contact/contact";
 @import "./scssPartials/pages/englishPages/englishPages";

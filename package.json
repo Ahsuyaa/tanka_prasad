@@ -26,6 +26,7 @@
         "infinite-react-carousel": "^1.2.11",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "react-hook-form": "^7.47.0",
         "react-icons": "^4.10.1",
         "react-responsive-carousel": "^3.2.23",
         "react-router-dom": "^6.15.0",
@@ -38,7 +39,7 @@
     "devDependencies": {
         "@popperjs/core": "^2.11.6",
         "@vitejs/plugin-vue": "^4.0.0",
-        "axios": "^1.1.2",
+        "axios": "^1.5.1",
         "bootstrap": "^5.2.3",
         "laravel-vite-plugin": "^0.7.2",
         "sass": "^1.56.1",
