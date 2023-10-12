@@ -7,60 +7,77 @@ const Footer = lazy(() => import("./components/main/Footer"));
 const Home = lazy(() => import("./components/pages/home/Home"));
 const Parichaya = lazy(() => import("./components/pages/parichaya/Parichaya"));
 const ParichayaSubpage = lazy(() =>
-  import("./components/pages/parichaya/ParichayaSubpage")
+    import("./components/pages/parichaya/ParichayaSubpage")
 );
 const PramukhKaryaharu = lazy(() =>
-  import("./components/pages/pramukhKaryaharu/PramukhKaryaharu")
+    import("./components/pages/pramukhKaryaharu/PramukhKaryaharu")
 );
 const PramukhKaryaharuSubpage = lazy(() =>
-  import("./components/pages/pramukhKaryaharu/PramukhKaryaharuSubpage")
+    import("./components/pages/pramukhKaryaharu/PramukhKaryaharuSubpage")
 );
 const Abalokan = lazy(() => import("./components/pages/abalokan/Abalokan"));
 const AbalokanSubpage = lazy(() =>
-  import("./components/pages/abalokan/AbalokanSubpage")
+    import("./components/pages/abalokan/AbalokanSubpage")
 );
 const Gallery = lazy(() => import("./components/pages/gallery/Gallery"));
-const Contact = lazy(() => import("./components/pages/contact/Contact"));
-const EnglishPages = lazy(() =>
-  import("./components/pages/englishPages/EnglishPages")
+const GalleryImages = lazy(() =>
+    import("./components/pages/gallery/GalleryImages")
 );
 
+const Contact = lazy(() => import("./components/pages/contact/Contact"));
+const EnglishPages = lazy(() =>
+    import("./components/pages/englishPages/EnglishPages")
+);
 
 function Main() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Header />
-        <Suspense fallback={<div>Loading</div>}>
-          <ScrollToTop />
-          <Routes>
-            <Route path="/">
-              <Route index element={<Home />} />
-              <Route path="/parichaya/" element={<Parichaya />} />
-              <Route
-                path="/parichaya/:subLink"
-                element={<ParichayaSubpage />}
-              />
-              <Route
-                path="/pramukh-karyaharu/"
-                element={<PramukhKaryaharu />}
-              />
-              <Route
-                path="/pramukh-karyaharu/:subLink"
-                element={<PramukhKaryaharuSubpage />}
-              />
-              <Route path="/abalokan/" element={<Abalokan />} />
-              <Route path="/abalokan/:subLink" element={<AbalokanSubpage />} />
-              <Route path="/gallery" element={<Gallery />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/inner-links/:subLink" element={<EnglishPages />} />
-            </Route>
-          </Routes>
-          <Footer />
-        </Suspense>
-      </BrowserRouter>
-    </div>
-  );
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <Header />
+                <Suspense fallback={<div>Loading</div>}>
+                    <ScrollToTop />
+                    <Routes>
+                        <Route path="/">
+                            <Route index element={<Home />} />
+                            <Route path="/parichaya/" element={<Parichaya />} />
+                            <Route
+                                path="/parichaya/:subLink"
+                                element={<ParichayaSubpage />}
+                            />
+                            <Route
+                                path="/pramukh-karyaharu/"
+                                element={<PramukhKaryaharu />}
+                            />
+                            <Route
+                                path="/pramukh-karyaharu/:subLinkId"
+                                element={<PramukhKaryaharuSubpage />}
+                            />
+                            <Route path="/abalokan/" element={<Abalokan />} />
+                            <Route
+                                path="/abalokan/:subLinkId"
+                                element={<AbalokanSubpage />}
+                            />
+                            <Route
+                                path="/gallery"
+                                element={<Gallery />}
+                            />
+                            <Route
+                                path="/gallery/:galleryName/images"
+                                element={<GalleryImages />}
+                            />
+
+                            <Route path="/contact" element={<Contact />} />
+                            <Route
+                                path="/inner-links/:subLink"
+                                element={<EnglishPages />}
+                            />
+                        </Route>
+                    </Routes>
+                    <Footer />
+                </Suspense>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default Main;
