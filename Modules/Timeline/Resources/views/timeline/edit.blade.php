@@ -60,7 +60,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="description">Description</label>
-                                    <textarea type="text" name="description" class="summernote" placeholder="Enter Description" >{{$timeline->description}}</textarea>
+                                    <textarea type="text" name="description" class="form-control" placeholder="Enter Description" >{{$timeline->description}}</textarea>
                                     @error('description')
                                     <p style="color: red">{{ $message }}</p>
                                     @enderror
