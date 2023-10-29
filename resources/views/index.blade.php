@@ -40,6 +40,7 @@
         $profile = \Modules\Setting\Entities\CompanyProfile::first();
     @endphp
     <title>{{ $profile->company_name }}</title>
+    <link href="{{ asset('upload/images/settings/'.$profile->favicon) }}" rel="icon" />
     @viteReactRefresh
     @vite('resources/js/App.jsx')
   </head>
