@@ -10,7 +10,6 @@ const Timeline = () => {
     const [isOverlay, setIsOverlay] = useState(false);
     const yearRefs = useRef([]);
     const [timelineApi, setTimelineApi] = useState([{}]);
-
     const [selectedYear, setSelectedYear] = useState({});
 
     const fetchTimeline = async () => {
@@ -68,7 +67,6 @@ const Timeline = () => {
                     : selectedYear && selectedYear
             );
         };
-
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, [timelineApi && timelineApi]);
@@ -99,15 +97,11 @@ const Timeline = () => {
                             setIsOverlay(false);
                         }}
                     />
-                    <div
-                        className="text-wrapper"
-                        dangerouslySetInnerHTML={{
-                            __html:
-                                selectedYear &&
-                                selectedYear.description &&
-                                selectedYear.description,
-                        }}
-                    />
+                    <div className="text-wrapper">
+                        {selectedYear &&
+                            selectedYear.description &&
+                            selectedYear.description}
+                    </div>
                 </div>
             )}
             <div className="timeline-wrapper">
@@ -115,9 +109,12 @@ const Timeline = () => {
                     className="timeline-background"
                     style={{
                         backgroundImage: `url(${
-                            selectedYear &&
-                            selectedYear.image_link &&
-                            selectedYear.image_link
+                            selectedYear && selectedYear.image_link
+                                ? selectedYear.image_link
+                                : timelineApi &&
+                                  timelineApi[0] &&
+                                  timelineApi[0].image_link &&
+                                  timelineApi[0].image_link
                         })`,
                     }}
                 ></div>
@@ -173,15 +170,12 @@ const Timeline = () => {
                                         selectedYear.title &&
                                         selectedYear.title}
                                 </h1>
-                                <div
-                                    className="brief"
-                                    dangerouslySetInnerHTML={{
-                                        __html:
-                                            selectedYear &&
-                                            selectedYear.description &&
-                                            selectedYear.description,
-                                    }}
-                                />
+
+                                <div className="brief">
+                                    {selectedYear &&
+                                        selectedYear.description &&
+                                        selectedYear.description}
+                                </div>
 
                                 <Button
                                     className="read-more-btn"
