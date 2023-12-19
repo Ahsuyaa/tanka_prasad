@@ -1,0 +1,14 @@
+.links-section {
+    position: sticky;
+    top: 3em;
+    height: max-content;
+    padding: 2em 1.5em;
+    border: 2px solid #00389328;
+    .links-wrapper {
+        .link {
+            &:hover {
+                color: $primaryPink !important;
+            }
+        }
+    }
+}

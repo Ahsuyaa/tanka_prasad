@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import SideDrawer from "./SideDrawer";
+import { AiOutlineCaretDown } from "react-icons/ai";
 
 const BottomBar = ({ menuList, companyApi }) => {
     const [majorWorksDropdownApi, setMajorWorksDropdownApi] = useState();
@@ -85,28 +86,37 @@ const BottomBar = ({ menuList, companyApi }) => {
                                                         color: "#003893",
                                                     }}
                                                 >
-                                                    {head}
+                                                    <div className="head-text">
+                                                        {head}
+                                                    </div>
+                                                    <AiOutlineCaretDown className="cart-icon" />
                                                 </NavLink>
                                                 <div className="dropdown-content">
-                                                    {majorWorksDropdownApi &&
-                                                        majorWorksDropdownApi.map(
-                                                            (item) => {
-                                                                const {
-                                                                    id = "",
-                                                                    title = "",
-                                                                } = item;
+                                                    <div className="dropdown-inner">
+                                                        {majorWorksDropdownApi &&
+                                                            majorWorksDropdownApi.map(
+                                                                (item) => {
+                                                                    const {
+                                                                        id = "",
+                                                                        title = "",
+                                                                    } = item;
 
-                                                                return (
-                                                                    <NavLink
-                                                                        to={`${headNavigate}/${id}`}
-                                                                        className="sub-cat nav-link"
-                                                                        key={id}
-                                                                    >
-                                                                        {title}
-                                                                    </NavLink>
-                                                                );
-                                                            }
-                                                        )}
+                                                                    return (
+                                                                        <NavLink
+                                                                            to={`${headNavigate}/${id}`}
+                                                                            className="sub-cat nav-link"
+                                                                            key={
+                                                                                id
+                                                                            }
+                                                                        >
+                                                                            {
+                                                                                title
+                                                                            }
+                                                                        </NavLink>
+                                                                    );
+                                                                }
+                                                            )}
+                                                    </div>
                                                 </div>
                                             </div>
                                         );
@@ -124,28 +134,38 @@ const BottomBar = ({ menuList, companyApi }) => {
                                                         color: "#003893",
                                                     }}
                                                 >
-                                                    {head}
+                                                    <div className="head-text">
+                                                        {head}
+                                                    </div>
+                                                    <AiOutlineCaretDown className="cart-icon" />
                                                 </NavLink>
-                                                <div className="dropdown-content">
-                                                    {observationDropdownApi &&
-                                                        observationDropdownApi.map(
-                                                            (item) => {
-                                                                const {
-                                                                    id = "",
-                                                                    title = "",
-                                                                } = item;
 
-                                                                return (
-                                                                    <NavLink
-                                                                        to={`${headNavigate}/${id}`}
-                                                                        className="sub-cat nav-link"
-                                                                        key={id}
-                                                                    >
-                                                                        {title}
-                                                                    </NavLink>
-                                                                );
-                                                            }
-                                                        )}
+                                                <div className="dropdown-content">
+                                                    <div className="dropdown-inner">
+                                                        {observationDropdownApi &&
+                                                            observationDropdownApi.map(
+                                                                (item) => {
+                                                                    const {
+                                                                        id = "",
+                                                                        title = "",
+                                                                    } = item;
+
+                                                                    return (
+                                                                        <NavLink
+                                                                            to={`${headNavigate}/${id}`}
+                                                                            className="sub-cat nav-link"
+                                                                            key={
+                                                                                id
+                                                                            }
+                                                                        >
+                                                                            {
+                                                                                title
+                                                                            }
+                                                                        </NavLink>
+                                                                    );
+                                                                }
+                                                            )}
+                                                    </div>
                                                 </div>
                                             </div>
                                         );
@@ -163,40 +183,55 @@ const BottomBar = ({ menuList, companyApi }) => {
                                                         color: "#003893",
                                                     }}
                                                 >
-                                                    {head}
+                                                    <div className="head-text">
+                                                        {head}
+                                                    </div>
+                                                    <AiOutlineCaretDown className="cart-icon" />
                                                 </NavLink>
                                                 <div className="dropdown-content">
-                                                    {subHeadList.map((item) => {
-                                                        const {
-                                                            id = "",
-                                                            link = "",
-                                                            subNavigate = "",
-                                                        } = item;
-                                                        if (
-                                                            subNavigate ===
-                                                            "contact"
-                                                        ) {
-                                                            return (
-                                                                <NavLink
-                                                                    to={`/${subNavigate}`}
-                                                                    className="sub-cat nav-link"
-                                                                    key={id}
-                                                                >
-                                                                    {link}
-                                                                </NavLink>
-                                                            );
-                                                        } else {
-                                                            return (
-                                                                <NavLink
-                                                                    to={`${headNavigate}/${subNavigate}`}
-                                                                    className="sub-cat nav-link"
-                                                                    key={id}
-                                                                >
-                                                                    {link}
-                                                                </NavLink>
-                                                            );
-                                                        }
-                                                    })}
+                                                    <div className="dropdown-inner">
+                                                        {subHeadList.map(
+                                                            (item) => {
+                                                                const {
+                                                                    id = "",
+                                                                    link = "",
+                                                                    subNavigate = "",
+                                                                } = item;
+                                                                if (
+                                                                    subNavigate ===
+                                                                    "contact"
+                                                                ) {
+                                                                    return (
+                                                                        <NavLink
+                                                                            to={`/${subNavigate}`}
+                                                                            className="sub-cat nav-link"
+                                                                            key={
+                                                                                id
+                                                                            }
+                                                                        >
+                                                                            {
+                                                                                link
+                                                                            }
+                                                                        </NavLink>
+                                                                    );
+                                                                } else {
+                                                                    return (
+                                                                        <NavLink
+                                                                            to={`${headNavigate}/${subNavigate}`}
+                                                                            className="sub-cat nav-link"
+                                                                            key={
+                                                                                id
+                                                                            }
+                                                                        >
+                                                                            {
+                                                                                link
+                                                                            }
+                                                                        </NavLink>
+                                                                    );
+                                                                }
+                                                            }
+                                                        )}
+                                                    </div>
                                                 </div>
                                             </div>
                                         );

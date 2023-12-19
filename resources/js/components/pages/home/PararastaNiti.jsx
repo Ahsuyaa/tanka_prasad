@@ -21,7 +21,16 @@ const PararastaNiti = () => {
     return (
         <div className="pararasta-niti-comp">
             <div className="contents">
-                <h1 className="title">
+                <h1
+                    className="title"
+                    onClick={() => {
+                        navigate(
+                            `/abalokan/${
+                                lastSection && lastSection.id && lastSection.id
+                            }`
+                        );
+                    }}
+                >
                     {lastSection && lastSection.title && lastSection.title}
                 </h1>
                 <div
