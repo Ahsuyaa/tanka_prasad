@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import TopBar from "./TopBar";
-import BottomBar from "./BottomBar";
+// import BottomBar from "./BottomBar";
+import MidBar from "./MidBar";
+import MenuBar from "./MenuBar";
 
 const Header = () => {
     const [companyApi, setCompanyApi] = useState();
@@ -19,7 +21,9 @@ const Header = () => {
     return (
         <div className="header-comp">
             <TopBar companyApi={companyApi && companyApi} />
-            <BottomBar companyApi={companyApi && companyApi} />
+            <MidBar companyApi={companyApi && companyApi} />
+            <MenuBar />
+            {/* <BottomBar companyApi={companyApi && companyApi} /> */}
         </div>
     );
 };

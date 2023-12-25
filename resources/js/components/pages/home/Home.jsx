@@ -4,6 +4,8 @@ import TimelineGuide from "./timelineGuide/TimelineGuide";
 import Intro from "./Intro";
 import Udayashya from "./Udayashya";
 import PararastaNiti from "./PararastaNiti";
+import HomeBanner from "./homeBanner/HomeBanner";
+import NewsSec from "./NewsSec";
 
 const Home = () => {
     const [companyApi, setCompanyApi] = useState();
@@ -20,11 +22,19 @@ const Home = () => {
     }, []);
     return (
         <div className="home-page">
-            {/* <HomeBanner /> */}
-            <TimelineGuide />
-            <Intro companyApi={companyApi && companyApi} />
-            <Udayashya companyApi={companyApi && companyApi}/>
-            <PararastaNiti />
+            <HomeBanner />
+            {/* <TimelineGuide /> */}
+            <div className="cols-container">
+                <div className="main-col">
+                    <Intro companyApi={companyApi && companyApi} />
+                <Udayashya companyApi={companyApi && companyApi} />
+                    <PararastaNiti />
+                    {/* <News companyApi={companyApi && companyApi} /> */}
+                </div>
+                <div className="side-col">
+                    <NewsSec companyApi={companyApi && companyApi}/>
+                </div>
+            </div>
         </div>
     );
 };

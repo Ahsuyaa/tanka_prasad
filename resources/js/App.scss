@@ -4,6 +4,7 @@ $primaryBlue: #003893;
 $primaryPink: #dc143c;
 $primaryWhite: #f7f6f6;
 $primaryPeru: #e85806;
+$primaryRearBlack: #3a3a3a;
 
 body {
     box-sizing: border-box;
@@ -17,6 +18,7 @@ body {
 // @import "./scssPartials/pages/parichaya/parichaya";
 
 @import "./scssPartials/forAll/linksSection";
+@import "./scssPartials/forAll/newsCard";
 
 @import "./scssPartials/pages/abalokan/abalokan";
 @import "./scssPartials/pages/abalokan/abalokanSubpage";

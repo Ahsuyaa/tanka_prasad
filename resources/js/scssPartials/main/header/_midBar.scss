@@ -1,0 +1,19 @@
+.midbar {
+    display: flex;
+    // align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5em;
+    padding: 1.5em 0;
+    // width: 1197px;
+    width: 1300px;
+    .side-div {
+        width: 200px;
+        cursor: pointer;
+    }
+    .comp-name {
+        font-size: 40px;
+        font-weight: 600;
+        color: $primaryBlue;
+    }
+}
