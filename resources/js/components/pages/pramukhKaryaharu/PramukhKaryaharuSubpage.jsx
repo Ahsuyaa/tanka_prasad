@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import StartingBanner from "../../forAll/StartingBanner";
 import { useParams } from "react-router-dom";
-import book1 from "../../../images/img.webp";
+import book1 from "../../../images/img.jpg";
 import book2 from "../../../images/img2.webp";
 import myPdf from "../../../assets/myBook.pdf";
 

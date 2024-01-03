@@ -1,11 +1,29 @@
-
-
 @import "./homeBanner";
-@import "./timelineGuide";
+// @import "./timelineGuide";
 @import "./intro";
 @import "./udayashya";
 @import "./pararastaNiti";
+@import "./newsSec";
 @import "../../forAll/snackBar";
 @import "../../forAll/startingBanner";
 @import "../../main/header/sideDrawer";
 
+.home-page {
+    font-family: "Anek Devanagari", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .cols-container {
+        width: 1300px;
+        padding: 0 15px;
+        display: grid;
+        grid-template-columns: 4fr 2fr;
+        gap: 2.5em;
+        .main-col{
+            
+        }
+        .side-col {
+            margin-top: 6em;
+        }
+    }
+}

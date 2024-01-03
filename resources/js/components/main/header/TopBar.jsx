@@ -21,6 +21,7 @@ const TopBar = ({ companyApi }) => {
                         >
                             <BiLogoFacebookCircle className="icon" />
                         </a>
+                        |
                         <a
                             href={
                                 companyApi &&
@@ -31,6 +32,7 @@ const TopBar = ({ companyApi }) => {
                         >
                             <TwitterIcon className="icon" />
                         </a>
+                        |
                         <a
                             href={
                                 companyApi &&
@@ -42,7 +44,7 @@ const TopBar = ({ companyApi }) => {
                             <BsYoutube className="icon" />
                         </a>
                     </div>
-                    <div className="info-wrapper">
+                    {/* <div className="info-wrapper">
                         <div className="info contact">
                             <Tooltip
                                 title={
@@ -81,7 +83,7 @@ const TopBar = ({ companyApi }) => {
                                 ठेगाना
                             </Tooltip>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>

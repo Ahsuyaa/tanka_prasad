@@ -1,0 +1,25 @@
+.news-sec {
+    width: 100%;
+    // width: ;
+    // background-color: red;
+    .sec-title {
+        color: $primaryRearBlack;
+        font-size: 30px;
+        line-height: 15px;
+        font-weight: 600;
+    }
+    .title-underline {
+        border-top: 1.5px solid $primaryRearBlack;
+    }
+    .cards {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    .view-all-btn {
+        margin-top: 10px;
+        font-size: 16px;
+        padding: 5px 25px 1px;
+    }
+}

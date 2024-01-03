@@ -6,8 +6,18 @@ const Intro = ({ companyApi }) => {
     return (
         <div className="intro-comp">
             <div className="contents">
+                <h1 className="title">प्रतिष्ठानको परिचय</h1>
+                <div className="title-underline"></div>
                 <div className="text-wrapper">
-                    <h1 className="title">प्रतिष्ठानको परिचय</h1>
+                    <img
+                        src={
+                            companyApi &&
+                            companyApi.image_link &&
+                            companyApi.image_link
+                        }
+                        alt=""
+                        className="profile-img"
+                    />
                     <div
                         className="desc"
                         dangerouslySetInnerHTML={{
@@ -18,29 +28,15 @@ const Intro = ({ companyApi }) => {
                         }}
                     />
                     <div className="read-more-wrapper">
-                        {/* <div className="btn-wrapper">
-              <CgMoreO className="read-more-btn" />
-            </div> */}
-                        <span
+                        {/* <span
                             className="btn-text"
                             onClick={() => {
                                 navigate("/parichaya");
                             }}
                         >
                             थप पढ्नुहोस्{" "}
-                        </span>
+                        </span> */}
                     </div>
-                </div>
-                <div className="image-wrapper">
-                    <img
-                        src={
-                            companyApi &&
-                            companyApi.image_link &&
-                            companyApi.image_link
-                        }
-                        alt=""
-                        className="profile-img"
-                    />
                 </div>
             </div>
         </div>

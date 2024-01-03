@@ -1,42 +1,42 @@
 .pararasta-niti-comp {
+    margin-top: 3em;
     background-color: #fff;
-    padding-top: 5em;
     display: flex;
     justify-content: center;
     height: 100%;
-    padding-bottom: 4em;
     position: relative;
     z-index: 1;
     .contents {
-        padding: 4em 0;
         height: 100%;
-        width: 1197px;
-        // &:hover {
-        //     .title {
-        //         text-decoration: underline;
-        //     }
-        // }
         .title {
-            color: $primaryPink;
-            font-size: 50px;
+            color: $primaryRearBlack;
+            font-size: 30px;
+            line-height: 15px;
             font-weight: 600;
-            cursor: pointer;
+        }
+        .title-underline {
+            border-top: 1.5px solid $primaryRearBlack;
         }
         .desc {
+            margin-top: 30px;
             color: rgb(38, 38, 38);
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 10; /* number of lines to show */
-            line-clamp: 10;
-            -webkit-box-orient: vertical;
             font-size: 17px;
             word-spacing: 10px;
             line-height: 26px;
-            text-align: justify;
-            cursor: pointer;
+            line-height: 26px;
+            
+            span {
+                font-size: 17px !important;
+                font-weight: 500;
+                font-family: "Anek Devanagari", sans-serif !important;
+            }
+            div {
+                font-size: 17px !important;
+                font-family: "Anek Devanagari", sans-serif !important;
+
+            }
         }
         .read-more-wrapper {
-            cursor: pointer;
             margin-top: 3.5em;
             display: flex;
             gap: 10px;
@@ -51,7 +51,6 @@
         .contents {
             width: 1050px;
             .read-more-wrapper {
-                cursor: pointer;
                 margin-top: 2em;
             }
         }
@@ -60,7 +59,6 @@
         .contents {
             width: 900px;
             .read-more-wrapper {
-                cursor: pointer;
                 margin-top: 2em;
             }
         }
@@ -70,7 +68,6 @@
             width: 700px;
             gap: 3em;
             .read-more-wrapper {
-                cursor: pointer;
                 margin-top: 1.5em;
             }
         }
@@ -93,7 +90,6 @@
                 }
             }
             .read-more-wrapper {
-                cursor: pointer;
                 margin-top: 1em;
             }
         }
