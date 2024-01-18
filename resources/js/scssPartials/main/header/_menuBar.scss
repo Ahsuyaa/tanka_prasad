@@ -1,5 +1,5 @@
 .menu-bar {
-    background-color: $primaryPink;
+
     position: sticky;
     top: 1em;
     z-index: 99;
@@ -7,11 +7,10 @@
     display: flex;
     justify-content: center;
     .content {
-        display: flex;
-        justify-content: center;
-        gap: 2.5em;
+    
+        gap: 1em !important;
         // width: 1197px;
-        width: 1300px;
+        width: 850px !important;
 
         padding: 0.5em 0;
         .nav-link {

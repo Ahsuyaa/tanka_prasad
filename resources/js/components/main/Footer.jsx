@@ -111,9 +111,9 @@ const Footer = ({ footerLinks }) => {
     };
     return (
         <>
-            <div className="footer-comp">
-                <div className="contents">
-                    <div className="top-bar">
+            <div className="footer-comp ">
+                <div className="contents ">
+                    <div className="top-bar my-10">
                         <div className="company-column">
                             <img
                                 src={

@@ -17,16 +17,16 @@ const LinksSection = ({ englishLinks }) => {
         fetchCompany();
     }, []);
     return (
-        <div className="links-section">
-            <h2 className="title">English</h2>
-            <div className="links-wrapper">
+        <div className="links-section m-3 sm:m-0 pt-10">
+            <h2 className="title font-bold text-[#003893] text-[35px]">English</h2>
+            <div className="links-wrapper ">
                 {linksApi &&
                     linksApi.map((item) => {
                         const { id = "", name = "", page = "" } = item;
                         return (
                             <NavLink
                                 to={`/inner-links/${page.slug && page.slug}`}
-                                className="link"
+                                className="link flex items-center gap-1 py-2 underline text-[#003893] text-[20px] font-semibold"
                                 key={id}
                             >
                                 <BsDot className="dot" />

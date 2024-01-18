@@ -98,7 +98,7 @@ const Contact = () => {
                 </div>
             )}
 
-            <StartingBanner />
+            {/* <StartingBanner /> */}
             <div className="contact-page">
                 <div className="contents">
                     <div className="main-section">

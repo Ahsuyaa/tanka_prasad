@@ -30,8 +30,8 @@ const GalleryImages = () => {
 
     return (
         <div className="gallery-images-page">
-            <StartingBanner />
-            <div className="images-wrapper">
+           
+            <div className="images-wrapper flex flex-wrap">
                 {imagesApi &&
                     imagesApi.map((item, idx) => {
                         const { id = "", image_link = "" } = item;

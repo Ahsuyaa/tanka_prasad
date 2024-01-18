@@ -13,13 +13,14 @@ body {
 }
 
 @import "./scssPartials/main/header/header";
+@import "./scssPartials/main/header/navBar";
 @import "./scssPartials/main/footer";
 @import "./scssPartials/pages/home/home.scss";
 // @import "./scssPartials/pages/parichaya/parichaya";
-
+@import "./scssPartials/pages/tankaprasad/tankaPrasad";
 @import "./scssPartials/forAll/linksSection";
 @import "./scssPartials/forAll/newsCard";
-
+@import "./scssPartials//pages/photocarousel/photoCarousel";
 @import "./scssPartials/pages/abalokan/abalokan";
 @import "./scssPartials/pages/abalokan/abalokanSubpage";
 @import "./scssPartials/pages/parichaya/parichaya";
@@ -31,3 +32,10 @@ body {
 
 @import "./scssPartials/pages/contact/contact";
 @import "./scssPartials/pages/englishPages/englishPages";
+/* src/styles/main.css */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Your custom styles go here */

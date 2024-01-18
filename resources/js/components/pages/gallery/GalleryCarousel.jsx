@@ -3,7 +3,7 @@ import { Carousel } from "react-responsive-carousel";
 
 const ReactResponsiveCarousel = ({ imagesList, currentImageIdx }) => {
     return (
-        <div>
+        <div className="mx-auto">
             <Carousel
                 style={{ zIndex: "-9" }}
                 // showArrows={true}

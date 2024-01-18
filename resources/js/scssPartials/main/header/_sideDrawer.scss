@@ -1,59 +1,160 @@
-.sidebar {
-  padding: 1em 1em;
+.menu-bar {
+  background-color: $primaryPink;
+  position: sticky;
+  top: 1em;
+  z-index: 99;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  .company-logo {
-    width: 120px;
-  }
-  .divider {
-    margin: 15px 0;
-  }
-  .items-wrapper {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0.5em;
-    gap: 1em;
-    .dropdown {
-      .head-wapper {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 0.5em;
-        font-size: 1.1em;
-        .plus-minus {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 30px;
-          height: 30px;
-          font-size: 18px;
-        }
-        .hide-plus {
-          display: none;
-        }
-        .hide-minus {
-          display: none;
-        }
-      }
-      .drop-down-content {
-        font-weight: 400;
+  justify-content: center;
+  .content {
+      display: flex;
+      justify-content: center;
+      gap: 2.5em;
+      // width: 1197px;
+      width: 1300px;
 
-        display: flex;
-        flex-direction: column;
-        gap: 0px;
-        margin-top: 0.5em;
-        margin-left: 2.4em;
-        .sub-cat {
-          text-decoration: none;
-          color: $primaryBlue;
-        }
+      padding: 0.5em 0;
+      .nav-link {
+          position: relative;
+          color: #fff;
+          font-size: 15px;
+          font-weight: 600;
+          padding: 0.3em 0.2em !important;
       }
-    }
-    .menu-item {
-      font-weight: 600;
-      text-decoration: none;
-      color: $primaryBlue;
-      //   font-size: 1.1em;
-    }
+      .nav-link::after {
+          content: "";
+          position: absolute;
+          height: 1px;
+          width: 100%;
+          background-color: #fff;
+          bottom: -1.5px;
+          border-radius: 10px;
+          left: 50%;
+          transform: translate(-50%);
+          transform-origin: right;
+          scale: 0 1;
+          transition: scale 0.3s ease-in-out;
+      }
+      .nav-link:hover::after {
+          scale: 1 1;
+          transform-origin: left;
+      }
+      .nav-dropdown {
+          .nav-link {
+              display: flex;
+              align-items: center;
+              font-weight: 600;
+              .drop-caret {
+                  width: 18px;
+                  height: 18px;
+              }
+          }
+          &:hover {
+              .nav-link::after {
+                  content: "";
+                  position: absolute;
+                  height: 1px;
+                  width: 100%;
+                  background-color: #fff;
+                  bottom: -1.5px;
+                  border-radius: 10px;
+                  left: 50%;
+                  transform: translate(-50%);
+                  transform-origin: right;
+                  scale: 0 1;
+                  transition: scale 0.3s ease-in-out;
+              }
+              .nav-link::after {
+                  scale: 1 1;
+                  transform-origin: left;
+              }
+          }
+
+          .sublinks {
+              // background-color: rgba(0, 0, 255, 0.32);
+              display: none;
+              position: absolute;
+              padding-top: 0.5em;
+              .inner-wrapper {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 5px;
+                  padding: 10px 0;
+                  background-color: #ffffff;
+                  .xchild-link {
+                      color: #434343;
+                      background-color: #fff;
+                      text-decoration: none;
+                      font-size: 14px;
+                      padding: 0.3em 1em;
+                      min-width: 180px;
+
+                      &:hover {
+                          color: $primaryPink;
+                      }
+                  }
+                  .sublink {
+                      position: relative;
+                      color: #434343;
+                      background-color: #fff;
+                      text-decoration: none;
+                      font-size: 14px;
+                      .sub-link {
+                          padding: 0.3em 1em;
+
+                          display: flex;
+                          // gap: 6em;
+                          min-width: 180px;
+
+                          justify-content: space-between;
+                          align-items: center;
+                          text-decoration: none;
+                          color: #434343;
+                          &:hover {
+                              color: $primaryPink;
+                          }
+                      }
+                      .child-links {
+                          display: none;
+                          position: absolute;
+                          top: 22%;
+                          left: 100%;
+                          .innner-links {
+                              display: flex;
+                              flex-direction: column;
+                              background-color: #fff;
+                              gap: 5px;
+                              padding: 10px 0;
+                              .child-link {
+                                  min-width: 180px;
+                                  color: #434343;
+                                  font-size: 14px;
+                                  font-weight: 400;
+                                  padding: 0.3em 1em;
+                                  // padding-right: 7em;
+                                  text-decoration: none;
+                                  &:hover {
+                                      color: $primaryPink;
+                                  }
+                              }
+                          }
+                      }
+                      &:hover {
+                          .sub-link {
+                              color: $primaryPink;
+                          }
+                          .child-links {
+                              display: block;
+                          }
+                      }
+                  }
+              }
+          }
+          &:hover {
+              .sublinks {
+                  display: inline-block;
+              }
+          }
+      }
   }
 }

@@ -1,103 +1,101 @@
 
-.udayashya-comp {
-    .head {
-        color: $primaryRearBlack;
-        font-size: 30px;
-        line-height: 15px;
-        font-weight: 600;
-    }
-    .title-underline {
-        border-top: 1.5px solid $primaryRearBlack;
-    }
-    .contents {
-        margin-top: 30px;
-        .text-container {
-            .image {
-                width: 250px;
-                float: left;
-                margin-right: 1em;
-            }
-            .brief {
-                color: rgb(38, 38, 38);
-                font-size: 17px;
-                word-spacing: 10px;
-                line-height: 26px;
-                span {
-                    font-size: 17px !important;
-                    font-weight: 500;
-                }
-                div {
-                    font-size: 17px !important;
-                }
-            }
-            .read-more-wrapper {
-                cursor: pointer;
-                margin-top: 3.5em;
-                display: flex;
-                gap: 10px;
-                .btn-text {
-                    color: $primaryBlue;
-                    font-weight: 600;
-                    font-size: 16px;
-                }
-            }
-        }
-    }
-    @media screen and (max-width: 1310px) {
-        .contents {
-            width: 1050px;
-            .image {
-                width: 100%;
-            }
-        }
-    }
-    @media screen and (max-width: 1160px) {
-        .contents {
-            width: 900px;
-            .image {
-                max-width: 100%;
-            }
-        }
-    }
-    @media screen and (max-width: 1020px) {
-        .contents {
-            width: 700px;
-            gap: 3em;
-            .image {
-                max-width: 100%;
-            }
-        }
-    }
-    @media screen and (max-width: 790px) {
-        .contents {
-            text-align: justify;
-            height: max-content;
-            width: 600px;
-            display: grid;
-            grid-template-columns: 1fr;
-            // flex-direction: column;
-            gap: 2em;
-            .text-container {
-                grid-row-start: 1;
-                // grid-row-end: 2;
-                width: 100%;
-            }
-            .image-container {
-                width: 100%;
-                .profile-img {
-                    max-width: 70%;
-                }
-            }
-        }
-    }
-    @media screen and (max-width: 670px) {
-        .contents {
-            padding: 0em 1em;
-            .text-container {
-                .head {
-                    font-size: 27px;
-                }
-            }
-        }
-    }
-}
+// .udayashya-comp {
+//     .head {
+
+       
+//         line-height: 15px;
+//         font-weight: 600;
+//     }
+//     .title-underline {
+//         border-top: 1.5px solid $primaryRearBlack;
+//     }
+//     .contents {
+//         margin-top: 30px;
+//         .text-container {
+//             .image {
+//             max-width: 400px;
+//             }
+//             .brief {
+               
+//                 font-size: 17px;
+//                 word-spacing: 10px;
+//                 line-height: 26px;
+//                 span {
+//                     font-size: 17px !important;
+//                     font-weight: 500;
+//                 }
+//                 div {
+//                     font-size: 17px !important;
+//                 }
+//             }
+//             .read-more-wrapper {
+//                 cursor: pointer;
+//                 margin-top: 3.5em;
+//                 display: flex;
+//                 gap: 10px;
+//                 .btn-text {
+//                     color: $primaryBlue;
+//                     font-weight: 600;
+//                     font-size: 16px;
+//                 }
+//             }
+//         }
+//     }
+//     @media screen and (max-width: 1310px) {
+//         .contents {
+//             width: 1050px;
+//             .image {
+//                 width: 100%;
+//             }
+//         }
+//     }
+//     @media screen and (max-width: 1160px) {
+//         .contents {
+//             width: 900px;
+//             .image {
+//                 max-width: 100%;
+//             }
+//         }
+//     }
+//     @media screen and (max-width: 1020px) {
+//         .contents {
+//             width: 700px;
+//             gap: 3em;
+//             .image {
+//                 max-width: 100%;
+//             }
+//         }
+//     }
+//     @media screen and (max-width: 790px) {
+//         .contents {
+//             text-align: justify;
+//             height: max-content;
+//             width: 600px;
+//             display: grid;
+//             grid-template-columns: 1fr;
+//             // flex-direction: column;
+//             gap: 2em;
+//             .text-container {
+//                 grid-row-start: 1;
+//                 // grid-row-end: 2;
+//                 width: 100%;
+//             }
+//             .image-container {
+//                 width: 100%;
+//                 .profile-img {
+//                     max-width: 70%;
+//                 }
+//             }
+//         }
+//     }
+//     @media screen and (max-width: 670px) {
+//         .contents {
+//             padding: 0em 1em;
+//             .text-container {
+//                 .head {
+//                     font-size: 27px;
+//                 }
+//             }
+//         }
+//     }
+// }

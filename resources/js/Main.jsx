@@ -1,8 +1,19 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import AboutUs from "./components/pages/about/AboutUs";
+import Pustakalaya from "./components/pages/pustakalaya/Pustakalaya";
+import Suchana from "./components/pages/suchana/Suchana";
+import SuchanaDetail from "./components/pages/suchana/SuchanaDetail"
+import PhotoGallery from "./components/pages/photo/Photo";
+import PhotoCarousel from "./components/pages/photo/PhotoCarousel";
+import Teams from "./components/pages/teams/Teams";
+import Pratisthan from "./components/pages/pratisthan/Pratisthan";
+import Gatibidi from "./components/pages/gatibidi/Gatibidi";
+import Parichaye from "./components/pages/parichaye/Parichaye";
 const ScrollToTop = lazy(() => import("./components/forAll/ScrollToTop"));
 const Header = lazy(() => import("./components/main/header/Header"));
+const NavBar = lazy(() => import("./components/main/header/NavBar"));
 const Footer = lazy(() => import("./components/main/Footer"));
 const Home = lazy(() => import("./components/pages/home/Home"));
 const Parichaya = lazy(() => import("./components/pages/parichaya/Parichaya"));
@@ -29,17 +40,44 @@ const EnglishPages = lazy(() =>
     import("./components/pages/englishPages/EnglishPages")
 );
 
+const TankaPrasad= lazy(() =>
+    import("./components/pages/tankaprasad/TankaPrasad")
+);
+
 function Main() {
     return (
         <div className="App">
             <BrowserRouter>
-                <Header />
+                <NavBar />
                 <Suspense fallback={<div>Loading</div>}>
                     <ScrollToTop />
                     <Routes>
                         <Route path="/">
                             <Route index element={<Home />} />
-                            <Route path="/parichaya/" element={<Parichaya />} />
+                            <Route path="/aboutus/" element={<AboutUs/>} />
+                            <Route
+                                path="/pustakalaya"
+                                element={<Pustakalaya />}
+                            />
+                              <Route
+                                path="/suchana"
+                                element={<Suchana  />}
+                            />
+                              <Route
+                                path="/parichaye"
+                                element={<Parichaye/>}
+                            />
+                           
+                            
+                             <Route path="/suchanadetail/:id" element={<SuchanaDetail />}/>
+                             <Route
+                                path="/photos"
+                                element={<PhotoGallery />}
+                            />
+                              <Route path="/photocarousel/:index" element={<PhotoCarousel/>}/>
+                              <Route path="/teamsmember" element={<Teams/>}/>
+                              <Route path="/pratisthan" element={<Pratisthan/>}/>
+                              <Route path="/gatibidi" element={<Gatibidi/>}/>
                             <Route
                                 path="/parichaya/:subLink"
                                 element={<ParichayaSubpage />}
@@ -58,7 +96,7 @@ function Main() {
                                 element={<AbalokanSubpage />}
                             />
                             <Route
-                                path="/gallery"
+                                path="/gallerys"
                                 element={<Gallery />}
                             />
                             <Route
@@ -70,6 +108,10 @@ function Main() {
                             <Route
                                 path="/inner-links/:subLink"
                                 element={<EnglishPages />}
+                            />
+                              <Route
+                                path="/tankaprasad"
+                                element={<TankaPrasad />}
                             />
                         </Route>
                     </Routes>

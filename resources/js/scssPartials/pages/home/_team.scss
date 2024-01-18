@@ -1,0 +1,23 @@
+/* Teams.css */
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  
+   font-size: 40px;
+    color: #333; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .custom-prev {
+    left: -20px; /* Adjust as needed */
+  }
+  
+  .custom-next {
+    right: -20px; /* Adjust as needed */
+  }
+
+  

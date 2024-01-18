@@ -121,7 +121,7 @@ const Timeline = () => {
                 <div className="timeline">
                     <div className="columns-wrapper">
                         <div className="years-inner-caption">
-                            <div className="samaya-rekha-text-wrapper">
+                            <div className="samaya-rekha-text-wrapper mt-10">
                                 <div className="clock-text-wrapper">
                                     <PiClockCountdownFill className="clock-icon" />
                                     <span className="clock-text">समय</span>
@@ -160,7 +160,7 @@ const Timeline = () => {
                                     ))}
                             </div>
                         </div>
-                        <div className="content">
+                        <div className="content z-0">
                             <div className="text">
                                 <h1 className="title">
                                     {/* {selectedYear &&

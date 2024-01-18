@@ -1,0 +1,25 @@
+.lowernav{
+    background-color: $primaryBlue
+}
+.upperfixed{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    animation: fadeInDown 0.5s;
+  }
+@keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .upperfixed a{
+    color: black !important;
+  }
+  .mobile-content{
+    flex-direction: column;
+  }
